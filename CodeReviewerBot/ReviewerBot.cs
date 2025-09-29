@@ -56,7 +56,7 @@ namespace CodeReviewerBot
             _history.Add(new AssistantChatMessage(reply));
             _entries.Add(new ChatEntry("assistant", reply));
 
-            UsageMeter.ShowUseage(response.Value.Usage);
+            UsageMeter.ShowUsage(response.Value.Usage);
         }
     }
 }

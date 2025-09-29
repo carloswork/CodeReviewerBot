@@ -16,17 +16,25 @@ class Program
         List<ChatMessage>? history = null;
         List<ChatEntry>? entries = null;
 
-        if (!string.IsNullOrWhiteSpace(startCmd) && startCmd.StartsWith("load "))
+        if (!string.IsNullOrWhiteSpace(startCmd))
         {
-            var fileName = startCmd.Substring(5).Trim();
-            if (File.Exists(fileName))
+            if (startCmd.Equals("new", StringComparison.OrdinalIgnoreCase))
             {
-                history = HistorySaver.LoadFromJson(fileName, out entries);
-                Console.WriteLine($"Loaded session from {fileName}");
+                Console.WriteLine("Starting a fresh session...\n");
+                // history and entries will be initialized by ReviewerBot constructor
             }
-            else
+            else if (startCmd.StartsWith("load ", StringComparison.OrdinalIgnoreCase))
             {
-                Console.WriteLine("File not found. Starting a new session.");
+                var fileName = startCmd.Substring(5).Trim();
+                if (File.Exists(fileName))
+                {
+                    history = HistorySaver.LoadFromJson(fileName, out entries);
+                    Console.WriteLine($"Loaded session from {fileName}\n");
+                }
+                else
+                {
+                    Console.WriteLine("File not found. Starting a new session.\n");
+                }
             }
         }
 

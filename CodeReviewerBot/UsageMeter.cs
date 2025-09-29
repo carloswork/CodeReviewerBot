@@ -15,7 +15,7 @@ namespace CodeReviewerBot
         /// Displays token usage and estimated costs to the console.
         /// </summary>
         /// <param name="usage"></param>
-        public static void ShowUseage(ChatTokenUsage usage)
+        public static void ShowUsage(ChatTokenUsage usage)
         {
             var inputTokens = usage.InputTokenCount;
             var outputTokens = usage.OutputTokenCount;

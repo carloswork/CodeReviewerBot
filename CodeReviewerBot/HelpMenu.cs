@@ -14,6 +14,7 @@
             Console.WriteLine("  refactor <code>    - Refactor the code");
             Console.WriteLine("  review <code>      - Review the code");
             Console.WriteLine("  unittest <code>    - Create unit tests");
+            Console.WriteLine("  explain <code>     - Explain the code step by step");
             Console.WriteLine("  help               - Show this help message");
             Console.WriteLine("  exit               - Quit the reviewer");
             Console.WriteLine();
