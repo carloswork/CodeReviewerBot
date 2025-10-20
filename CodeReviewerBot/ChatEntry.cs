@@ -5,6 +5,8 @@
     /// </summary>
     public class ChatEntry
     {
+        public ChatEntry() { }
+
         public ChatEntry(string role, string content, DateTime timestamp) 
         {
             Role = role;
