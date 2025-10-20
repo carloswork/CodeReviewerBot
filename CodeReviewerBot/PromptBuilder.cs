@@ -18,7 +18,8 @@ namespace CodeReviewerBot
             "1. Strengths\n" +
             "2. Issues / Bugs\n" +
             "3. Suggested Improvements\n" +
-            "Be concise but specific. Use bullet points.";
+            "Be concise but specific. Use bullet points." +
+            "If I ask some questions that are not related to C# code, let me know and do not answer it.";
 
             return new SystemChatMessage(prompt);
         }
